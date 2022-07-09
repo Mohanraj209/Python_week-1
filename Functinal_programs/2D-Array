@@ -1,0 +1,24 @@
+def PrintArray(rows,cols):
+    # defining a func..      
+    array = []
+    print("Enter the element:")
+  
+     # To create a 2D array..
+    for i in range(rows):          
+        a = []
+        for j in range(cols):     
+            a.append(input()) # Adding elements of the cols.. 
+        array.append(a)
+     
+     # print the array..
+    print("After inserting the array elements: ")  
+    for i in range(rows):
+        for j in range(cols):
+            print(array[i][j], end = " ") 
+            # "end" parameter used to add string.. 
+        print()
+         
+try:  # Tests a block of code for errors..
+    PrintArray(3,3)
+except Exception as e:  # exicution takes place when error in "try" block..
+    print("invalid input",e)
